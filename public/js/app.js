@@ -3,7 +3,7 @@ const openButton=document.querySelector(".open-menu-button").addEventListener('c
 const closeButton=document.querySelector(".close-menu-button").addEventListener('click',toggleMenu);
 const navBar=document.querySelector(".mobile-navbar-container");
 const navBarBox=document.querySelector(".mobile-navbar-box");
-const navBarLinks = navBarBox.querySelectorAll("li");
+const navBarLinks = navBarBox.querySelectorAll(".mobile-navbar-box li.navbar-item");
 const body=document.querySelector("body");
 
 navBarLinks.forEach(link => {
@@ -29,6 +29,19 @@ const hiddenElementsRight=document.querySelectorAll('.hidden-right').forEach((el
 const hiddenElementsBottom=document.querySelectorAll('.hidden-bottom').forEach((el)=>observer.observe(el));
 const hiddenElementsTop=document.querySelectorAll('.hidden-top').forEach((el)=>observer.observe(el));
 
+const dropdownLanguageMobile=document.querySelector('.dropdown--mobile .active-language').addEventListener('click',toggleDropDownMobile);
+
+function toggleDropDownMobile(){
+    const buttonDropdownMobile=document.querySelector('.dropdown--mobile .dropdown-button').classList.toggle('open');
+    const optionsDropdownMobile=document.querySelector('.dropdown--mobile .dropdown-options-box').classList.toggle('open');
+}
+
+const dropdownLanguageDesktop=document.querySelector('.dropdown--desktop .active-language').addEventListener('click',toggleDropDownDesktop);
+
+function toggleDropDownDesktop(){
+    const buttonDropdownDesktop=document.querySelector('.dropdown--desktop .dropdown-button').classList.toggle('open');
+    const optionsDropdownDesktop=document.querySelector('.dropdown--desktop .dropdown-options-box').classList.toggle('open');
+}
 
 document.querySelectorAll('.mobile-navbar-container li a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

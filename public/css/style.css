@@ -94,7 +94,7 @@ header{
     transition: top .4s ease-in-out, background-image .4s ease-in-out, box-shadow .4s ease-in-out;
 }
 
-header img{
+header .header-logo{
     height: 45px;
 }
 
@@ -112,7 +112,7 @@ header .mobile-navbar-container{
     right: -100%;
     width: 80%;
     height: 100vh;
-    background-color: #2e2e2e;
+    background-color: #202024;
     transition: right .4s;
     z-index: 100;
 }
@@ -166,6 +166,105 @@ header .mobile-navbar-container li a{
     color: #ffffff;
 }
 
+header .mobile-navbar-container .mobile-navbar .dropdown{
+    position: relative;
+    margin: 30px 30px;
+    width: 70%;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .active-language{
+    background-color: #202024;
+    border: 1px solid #696969;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 240px;
+    border-radius: 30px;
+    padding: 5px 8px;
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .active-language .dropdown-language-box{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .active-language .dropdown-button{
+    position: absolute;
+    width: 27px;
+    right: 7px;
+    transition: transform .15s ease-in-out;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .active-language .dropdown-button.open{
+    transform: rotate(90deg);
+}
+
+.language-flag-box{
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown-language-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-language-box p{
+    color: #c4c4c4;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .dropdown-options-box{
+    width: 100%;
+    padding: 0;
+    background-color: #202024;
+    border: 1px solid #696969;
+    max-width: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: none;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .dropdown-options-box.open{
+    display: initial;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .dropdown-options-box .option-language{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 8px;
+    gap: 20px;
+    position: relative;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .dropdown-options-box .option-language--1{
+    border-bottom: 1px solid #636363;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .dropdown-options-box .option-language:hover{
+    background-color: #2a2a2e;
+}
+
+header .mobile-navbar-container .mobile-navbar .dropdown .dropdown-options-box .option-language p{
+    color: #c4c4c4;
+}
 
 /*  MAIN   */
 
@@ -980,10 +1079,6 @@ footer .footer-container .contact-data-container .logo-footer-box .logo-footer-b
         font-weight: 200;
     }
 
-    .alert-contact-box div svg{
-        width: 25px;
-    }
-
     .alert-contact-box div a{
         color: #ffffff;
     }
@@ -996,7 +1091,7 @@ footer .footer-container .contact-data-container .logo-footer-box .logo-footer-b
 
     header{
         top: 30px;
-        padding: 0px 50px;
+        padding: 0px 30px;
     }
 
     header .open-menu-button{
@@ -1020,6 +1115,7 @@ footer .footer-container .contact-data-container .logo-footer-box .logo-footer-b
 
     header .desktop-navbar-container .desktop-navbar .desktop-navbar-box li a{
         color: #ffffff;
+        text-wrap: nowrap;
     }
 
     header .desktop-navbar-container .desktop-navbar .desktop-navbar-box li::after{
@@ -1051,6 +1147,109 @@ footer .footer-container .contact-data-container .logo-footer-box .logo-footer-b
         flex-direction: row;
         gap: 50px;
     }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown{
+        position: relative;
+        margin-left: 30px;
+        width: 70%;
+        max-width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .active-language{
+        background-color: #202024;
+        border: 1px solid #696969;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 150px;
+        border-radius: 30px;
+        padding: 5px 15px 5px 8px;
+        gap: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .active-language .dropdown-language-box{
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .active-language .dropdown-button{
+        position: absolute;
+        width: 27px;
+        right: 7px;
+        transition: transform .15s ease-in-out;
+    }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .active-language .dropdown-button.open{
+        transform: rotate(90deg);
+    }
+
+    .language-flag-box{
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+    
+    .dropdown-language-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .dropdown-language-box p{
+        color: #c4c4c4;
+    }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .dropdown-options-box{
+        width: 100%;
+        max-width: 150px;
+        padding: 0;
+        background-color: #202024;
+        border: 1px solid #696969;
+        border-radius: 20px;
+        overflow: hidden;
+        position: absolute;
+        top: 3rem;
+        display: none;
+    }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .dropdown-options-box.open{
+        display: initial;
+    }
+
+    header .desktop-navbar-container .desktop-navbar .dropdown .dropdown-options-box .option-language{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 10px 8px;
+        gap: 20px;
+    }
+
+    
+    header .desktop-navbar-container .desktop-navbar .dropdown .dropdown-options-box .option-language:hover{
+        background-color: #2a2a2e;
+    }
+    
+    header .desktop-navbar-container .desktop-navbar .dropdown .dropdown-options-box .option-language p{
+        color: #c4c4c4;
+    } 
+    
+    
+    
 
     main .home-article{
         position: relative;
