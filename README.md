@@ -1,9 +1,9 @@
 # Fendyan S.A.
 Fendyan S.A. Web Site
 
-URL: https://fendyansa.com/
+URL: [www.fendyansa.com](https://fendyansa.com/)
 
-Figma Project: https://www.figma.com/design/JSjgetM4wBby9rE3rK7nok/Fendyan-SA?t=gchXRMKh6dcgAlOl-1
+Figma Project: [Figma Design](https://www.figma.com/design/JSjgetM4wBby9rE3rK7nok/Fendyan-SA?t=gchXRMKh6dcgAlOl-1)
 
 # Project: Transport Logistic Page
 
